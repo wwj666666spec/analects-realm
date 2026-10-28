@@ -18,7 +18,7 @@ The package should contain:
 project\
   rag\                 code, docker-compose.yml, and two tar.gz archives
   web\                 the site
-  数据\                Markdown files for the library
+  data\                Markdown files for the library
 ```
 
 The inner folder must stay named `rag`. You can rename the outer folder. Do not rename `rag`.
@@ -36,7 +36,7 @@ No spaces around `=`, and no quotes. Do not share this file.
 
 ## 3. Install Python dependencies
 
-From the project root (the folder that contains `rag`, `web`, and `数据`):
+From the project root (the folder that contains `rag`, `web`, and `data`):
 
 ```powershell
 pip install -r rag/requirements.txt
@@ -92,7 +92,7 @@ Do not run `python server.py` or `python -m rag` inside `rag/`. Run `python -m r
 
 ## 6. What each page uses
 
-- Library and reading: local Markdown in `数据`. They do not call Token Factory.
+- Library and reading: local Markdown in `data`. They do not call Token Factory.
 - Q&A and Conversations with the Sages: the database, the local embedding model, and Nemotron on Nebius Token Factory. The first question loads `bge-m3` into GPU memory and is slower.
 - Sign-in and registration: the restored database. The first registration creates the user table.
 

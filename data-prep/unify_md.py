@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""把「数据」目录里的 md 统一成两级标题。
+"""把 data 目录里的 md 统一成两级标题。
 
 # 用文件名（译文两篇用「史记·篇名译文」）。
 ## 只标原文里单独成行的篇、卷、序、提要、凡例、目录。
@@ -11,7 +11,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent / "数据"
+ROOT = Path(__file__).resolve().parent.parent / "data"
 
 SKIP = {"论语.md", "史记孔子世家.md", "史记仲尼弟子列传.md"}
 TRANS = {

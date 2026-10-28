@@ -21,7 +21,7 @@ def _load_env_file(path: Path) -> None:
 
 _load_env_file(ENV_FILE)
 
-DATA_DIR = Path(os.environ.get("LUNYU_DATA_DIR", ROOT / "数据"))
+DATA_DIR = Path(os.environ.get("LUNYU_DATA_DIR", ROOT / "data"))
 
 DATABASE_URL = os.environ.get(
     "DATABASE_URL",

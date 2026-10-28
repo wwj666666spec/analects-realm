@@ -65,7 +65,7 @@ python -m rag serve
 
 浏览器打开 http://127.0.0.1:8787 。
 
-数据库要先起来：在 `rag/` 里 `docker compose up -d`。问答、先贤和登录都会连这套库（宿主机端口 5434）。书库只读 `数据/` 里的 Markdown，阅读本身不查向量。
+数据库要先起来：在 `rag/` 里 `docker compose up -d`。问答、先贤和登录都会连这套库（宿主机端口 5434）。书库只读 `data/` 里的 Markdown，阅读本身不查向量。
 
 不要在 `rag/` 目录里用 `python server.py` 启动。那样 `import rag` 会失败。从项目根目录用 `python -m rag serve`。
 

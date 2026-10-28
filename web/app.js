@@ -28,7 +28,7 @@ import {
   voiceUi,
   wudeDesc,
   wudeLabel,
-} from "./i18n.js?v=36";
+} from "./i18n.js?v=37";
 
 const ASK_KEY = "lunyu.ask";
 const FAV_KEY = "lunyu.favs";

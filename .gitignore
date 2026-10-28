@@ -6,7 +6,7 @@ __pycache__/
 .venv/
 
 # Modern vernacular translations are not included in the public repository.
-数据/*翻译.md
+data/*翻译.md
 
 # Local reference checkout, not part of this app.
 参考/

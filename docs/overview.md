@@ -217,7 +217,7 @@ flowchart LR
 
 **阅读实现要点**
 
-- 正文来自本地 `数据/*.md`，不经过向量库。
+- 正文来自本地 `data/*.md`，不经过向量库。
 - 按 Markdown 二级标题 `##` 分节；无二级标题则整本作为正文。
 - 单节超过约 8000 字只显示开头并提示截断，保证翻页流畅。
 
@@ -542,7 +542,7 @@ LivePortrait 费用与动作幅度更适合「诵读」而不是夸张表演；�
 
 ## 10. Deployment
 
-详细步骤见仓库根目录《运行流程.md》。此处只保留系统介绍所需的环境画像。
+详细步骤见仓库根目录 [SETUP.md](../SETUP.md)。此处只保留系统介绍所需的环境画像。
 
 **本机要求**
 
@@ -632,22 +632,22 @@ LivePortrait 费用与动作幅度更适合「诵读」而不是夸张表演；�
 
 ```text
 智启论语/
-├── 数据/                 典籍 Markdown
+├── data/                 典籍 Markdown
 ├── rag/                  切块、检索、问答、先贤、风骨、HTTP
 │   ├── sages/            十七人 SKILL 与围坐规则
 │   ├── docker-compose.yml
 │   └── output/           上传与生成媒体
 ├── web/                  SPA 页面、样式、展示数据
 ├── docs/                 本介绍文档及设计资料
-└── 运行流程.md           启动与排错
+└── SETUP.md              启动与排错
 ```
 
 ## Appendix B. Related documents
 
 | 文档 | 用途 |
 | --- | --- |
-| 《运行流程.md》 | 环境、密钥、Docker 卷恢复、排错 |
-| 《web/前端搭建流程.md》 | 前端演进说明（以当前 SPA 代码为准） |
+| [SETUP.md](../SETUP.md) | 环境、密钥、Docker 卷恢复、排错 |
+| [web/frontend-setup.md](../web/frontend-setup.md) | 前端演进说明（以当前 SPA 代码为准） |
 | `rag/prompts.py` | 三模式与路由提示词原文 |
 | `rag/sages/` | 先贤人设文本 |
 

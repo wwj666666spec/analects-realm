@@ -96,7 +96,7 @@ const DICT = {
     "lib.index": "Index",
     "lib.emptyLoad": "Library content is still loading.",
     "lib.emptyLoadHint":
-      "Refresh the page, or verify the server is running and the Data folder contains .md work files.",
+      "Refresh the page, or verify the server is running and the data folder contains .md work files.",
     "lib.emptyQuery": "No works directly related to “{query}” were found in the library.",
     "lib.emptyHint": "Try another title, or explore this topic in AI Q&A.",
     "lib.filter": "Current Filter",
@@ -604,7 +604,7 @@ const DICT = {
     "lib.searchBtn": "搜索",
     "lib.index": "书目",
     "lib.emptyLoad": "书目尚未加载",
-    "lib.emptyLoadHint": "请刷新页面，或确认后端已启动且「数据」目录中有 .md 书册",
+    "lib.emptyLoadHint": "请刷新页面，或确认后端已启动且 data 目录中有 .md 书册",
     "lib.emptyQuery": "书库中暂未收录与「{query}」直接相关的书册",
     "lib.emptyHint": "可换个书名，或到智能问答中检索该主题",
     "lib.filter": "当前筛选",

@@ -55,8 +55,8 @@ python -m rag serve
 
 - `web/` — the site
 - `rag/` — API, retrieval, and Token Factory client
-- `数据/` — Markdown sources for the library viewer
-- `docs/` — project notes. Setup steps are in [运行流程.md](运行流程.md)
+- `data/` — Markdown sources for the library viewer
+- `docs/` — project notes. Setup steps are in [SETUP.md](SETUP.md)
 
 ## License
 
