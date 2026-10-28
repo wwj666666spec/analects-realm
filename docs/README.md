@@ -1,6 +1,6 @@
-# 项目文档
+# Project documents
 
-- **系统介绍（完整）**：[系统介绍.md](./系统介绍.md)  
-  含灵感来源、项目定位、功能演示、技术路线、模型选用、局限与演进、演示路径。
-- 启动与排错：仓库根目录 [运行流程.md](../运行流程.md)
-- 正式前端：`web/`（运行时不依赖本目录）
+- **Overview:** [系统介绍.md](./系统介绍.md)  
+  Origin, positioning, feature walkthrough, technical path, model choices, limits, and a demo route.
+- Setup and troubleshooting: [运行流程.md](../运行流程.md) at the repository root
+- The live frontend is `web/`. The site does not depend on this folder at runtime.

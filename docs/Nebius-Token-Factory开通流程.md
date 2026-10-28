@@ -1,4 +1,4 @@
-# Nebius Token Factory 开通流程
+# Nebius Token Factory setup
 
 比赛：[Nebius x NVIDIA Global AI Hackathon](https://nebiusglobalaihackathon.devpost.com/)
 
@@ -8,7 +8,7 @@
 
 按顺序做。每一步做完再做下一步。
 
-## 1. 领第一笔 25 美元
+## 1. Claim the first $25
 
 打开 [比赛资源页](https://nebiusglobalaihackathon.devpost.com/resources)，找到 **Token Factory Credits** 第 1 条，点 **this form**。
 
@@ -18,7 +18,7 @@
 
 这张表只是申请额度，不会马上给出 API 密钥。
 
-## 2. 领第二笔 25 美元
+## 2. Claim the second $25
 
 在 Devpost 比赛页的待办里点 **Signup for the Nebius Builder Program for credits**，或直接打开 [Nebius Builder Program](https://dev.nebius.com/builders)。
 
@@ -28,7 +28,7 @@
 - 页面上的 Tavily、Academy 先不用管
 - 如果表单拒绝 `gmail.com`，换学校邮箱再交一次
 
-## 3. 开通 Token Factory
+## 3. Open Token Factory
 
 打开 [https://tokenfactory.nebius.com](https://tokenfactory.nebius.com)，用 Google 或 GitHub 登录。不要用 Devpost 账号。
 
@@ -37,7 +37,7 @@
 - 列表里有中国：绑一张 Visa 或 Mastercard。这一步是验证，不是充值。不要点任何带金额的 **Top up**。卡里可以没有钱，验证通过即可。
 - 列表里没有中国，或卡一直被拒：停在这里，去做第 4 步。不要改选别的国家。
 
-## 4. 被拦住就找主办方
+## 4. If signup is blocked, contact the organizers
 
 打开 [Discord 邀请](https://discord.com/invite/eXYTGhgnhK)。
 
@@ -58,7 +58,7 @@ Devpost email: （你的邮箱）
 Token Factory login email: （登录用的 Google 或 GitHub 邮箱）
 ```
 
-## 5. 进了控制台再兑换、建密钥
+## 5. Redeem credits and create a key
 
 右上角能看到余额，才算开通。
 
@@ -75,7 +75,7 @@ Token Factory login email: （登录用的 Google 或 GitHub 邮箱）
 https://api.tokenfactory.nebius.com/v1/
 ```
 
-## 做到哪一步算完成
+## When this is finished
 
 同时满足这三件，就可以改项目里的模型调用：
 
