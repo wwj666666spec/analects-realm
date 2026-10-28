@@ -1,0 +1,12 @@
+rag/.env
+rag/output/
+rag/*.tar.gz
+__pycache__/
+*.pyc
+.venv/
+
+# Modern vernacular translations are not included in the public repository.
+数据/*翻译.md
+
+# Local reference checkout, not part of this app.
+参考/

@@ -1,0 +1,47 @@
+# 这一版只起向量库和嵌入模型。对话模型以后再加。
+# 在 rag 目录执行：
+#   docker compose up -d
+#   docker compose --profile pull run --rm ollama-pull
+# 然后在项目根目录：
+#   python -m rag ingest
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lunyu
+    ports:
+      - "5434:5432"
+    volumes:
+      - lunyu_pg:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d lunyu"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  ollama:
+    image: ollama/ollama
+    # 当前环境是 WSL 且无 NVIDIA 适配器；去掉 gpus 后走 CPU，避免
+    # nvidia-container-cli: WSL environment detected but no adapters were found
+    ports:
+      - "11434:11434"
+    volumes:
+      - lunyu_ollama:/root/.ollama
+
+  ollama-pull:
+    image: ollama/ollama
+    profiles: ["pull"]
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "bge-m3"]
+    restart: "no"
+
+volumes:
+  lunyu_pg:
+  lunyu_ollama:

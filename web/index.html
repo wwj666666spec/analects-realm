@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Realm of Confucius · Wisdom of The Analects</title>
+<meta name="description" content="An immersive Chinese classics learning and creative platform: read The Analects, explore with AI-guided inquiry, converse with Confucius’s disciples, and create your own classical-style recitation video." />
+<link rel="stylesheet" href="/static/site.css?v=38" />
+</head>
+<body>
+<div class="vignette"></div>
+<div class="grain"></div>
+
+<svg class="sr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="ic-book"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H11v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 4.5A1.5 1.5 0 0 0 18.5 3H13v16h5.5a1.5 1.5 0 0 1 1.5 1.5z"/></g>
+    <g id="ic-shelf"><path d="M3 6h7v15H3zM14 6h7v15h-7zM3 3h7M14 3h7"/></g>
+    <g id="ic-chat"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14.5h4"/></g>
+    <g id="ic-people"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.5 5.6a3.2 3.2 0 0 1 0 6.3M17.6 14.4A5.6 5.6 0 0 1 21.4 20"/></g>
+    <g id="ic-brush"><path d="M15.5 3.5 20.5 8.5 9 20H4v-5z"/><path d="M13.5 5.5 18.5 10.5"/></g>
+    <g id="ic-user"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></g>
+    <g id="ic-search"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/></g>
+    <g id="ic-star"><path d="m12 3.6 2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 10l6-.9z"/></g>
+    <g id="ic-home"><path d="M4 10.5 12 3.5l8 7V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></g>
+    <g id="ic-prev"><path d="M14.5 5 8 12l6.5 7"/></g>
+    <g id="ic-next"><path d="M9.5 5 16 12l-6.5 7"/></g>
+    <g id="ic-up"><path d="M4 5h6l2 2.5h8V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M12 17v-5M9.5 14 12 11.5 14.5 14"/></g>
+    <g id="ic-heart"><path d="M12 20S4 15.3 4 9.9A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8 2.6C20 15.3 12 20 12 20z"/></g>
+    <g id="ic-ask"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1 .9-1 1.6v.3"/><path d="M12 17h.01"/></g>
+    <g id="ic-play"><path d="M8 5.5v13l11-6.5z"/></g>
+    <g id="ic-download"><path d="M12 3.5v11M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></g>
+    <g id="ic-mic"><rect x="9" y="3" width="6" height="10.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"/></g>
+    <g id="ic-camera"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.6"/><path d="M8.5 6l1.4-2.2h4.2L15.5 6"/></g>
+    <g id="ic-upload"><path d="M12 20V9M7.5 13 12 8.5l4.5 4.5"/><path d="M4.5 5.5h15"/></g>
+    <g id="ic-group"><circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="9.6" r="2.4"/><path d="M2.5 19.5a5.6 5.6 0 0 1 11 0M15 15.4a4.6 4.6 0 0 1 6.5 4.1"/></g>
+    <g id="ic-check"><path d="M5 12.5 10 17.5 19.5 7"/></g>
+    <g id="ic-plus"><path d="M12 5v14M5 12h14"/></g>
+    <g id="ic-more"><circle cx="5.5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="18.5" cy="12" r="1.4"/></g>
+    <g id="ic-calendar"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g>
+    <g id="ic-spark"><path d="M12 3.5 13.7 9l5.3 1.8-5.3 1.8L12 20.5l-1.7-5.9L5 12.8 10.3 11z"/></g>
+    <g id="ic-send"><path d="M4 12 20 4l-6.5 16-2.6-6.6z"/><path d="m10.9 13.4 4-4"/></g>
+    <g id="ic-wave"><path d="M4 12h1.6M8 7v10M12 4.5v15M16 8.5v7M20 11h.6"/></g>
+    <g id="ic-lock"><rect x="4.5" y="10" width="15" height="10.5" rx="2"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></g>
+    <g id="ic-log"><path d="M6 3.5h9l4 4v13H6z"/><path d="M9.5 8h4M9.5 12h6M9.5 16h4"/></g>
+    <g id="ic-scroll"><path d="M5 4h9a2 2 0 0 1 2 2v13H7a2 2 0 0 0-2 2zM18 4a2 2 0 0 0-2 2v13"/><path d="M8 9h4"/></g>
+    <g id="ic-lang"><circle cx="12" cy="12" r="9"/><path d="M3.5 12h17M12 3c2.6 2.8 4 5.8 4 9s-1.4 6.2-4 9c-2.6-2.8-4-5.8-4-9s1.4-6.2 4-9z"/></g>
+  </defs>
+</svg>
+
+<!-- ========== 顶部导航 ========== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" data-i18n-aria="nav.brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22.5" fill="#fbf7ee" stroke="#9c2f26" stroke-width="1.4"/>
+        <circle cx="24" cy="24" r="18.6" fill="none" stroke="#9c2f26" stroke-width=".6" opacity=".55"/>
+        <path d="M8 30h32" stroke="#b08d57" stroke-width=".7" opacity=".7"/>
+        <path d="M13 30c1.6-6 4-9.4 7.4-10.2 2.4-.6 4 1.3 4.2 3.2.2-4.6.4-8.6 1.2-12.6" fill="none" stroke="#2f4a40" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M21.6 23.2c1.2-2 2.6-3.2 4.2-3.6M25.4 10.4c1.6.2 2.8 1 3.4 2.4M28.8 12.8c1.8-.8 3.6-2 5.2-3.6" fill="none" stroke="#2f4a40" stroke-width="1.3" stroke-linecap="round"/>
+        <text x="34" y="38" font-size="9" fill="#9c2f26" font-family="STKaiti,KaiTi,serif">語</text>
+      </svg>
+      <span class="brand-text">
+        <b>智启论语</b>
+        <span>KONGZI&nbsp;·&nbsp;LUNYU&nbsp;ACADEMY</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu" data-i18n-aria="nav.main">
+      <a href="/" data-nav="home" data-i18n="nav.home">Home</a>
+      <a href="/library" data-nav="library" data-i18n="nav.library">Library</a>
+      <a href="/ask" data-nav="ask" data-i18n="nav.ask">AI Q&amp;A</a>
+      <a href="/sages" data-nav="sages" data-i18n="nav.sages">Sages</a>
+      <a href="/presence" data-nav="create" data-i18n="nav.create">Studio</a>
+      <a href="/me" data-nav="me" data-i18n="nav.me">Account</a>
+    </nav>
+    <div class="nav-tools">
+      <div class="lang-switch" id="langSwitch" role="group" data-i18n-aria="lang.switch">
+        <button type="button" class="lang-btn" id="langZh" data-lang="zh" aria-label="Switch to Chinese">中文</button>
+        <button type="button" class="lang-btn on" id="langEn" data-lang="en" aria-label="Switch to English" aria-pressed="true">EN</button>
+      </div>
+      <button class="icon-btn" id="navSearch" data-i18n-title="nav.search" title="Search the classics" onclick="go('library')"><svg class="i"><use href="#ic-search"/></svg></button>
+      <button class="nav-user" id="navUser" onclick="go('me')" data-i18n-aria="nav.account">
+        <i id="navUserChar">学</i><span id="navUserName">Not signed in</span>
+      </button>
+      <button class="burger" id="burger" data-i18n-aria="nav.menu"><svg class="i"><use href="#ic-more"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 首页 ==================== -->
+<section class="view" id="v-home">
+  <div class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fefcf6" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#efe6d2" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="gFar" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#9ba292" stop-opacity=".40"/>
+            <stop offset="1" stop-color="#cfd0bd" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="gMid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#7b8473" stop-opacity=".48"/>
+            <stop offset="1" stop-color="#b8b9a3" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="gNear" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5b6355" stop-opacity=".5"/>
+            <stop offset="1" stop-color="#a6a894" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="soft6" x="-20%" y="-40%" width="140%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+          <filter id="soft16" x="-30%" y="-60%" width="160%" height="260%"><feGaussianBlur stdDeviation="17"/></filter>
+        </defs>
+        <rect width="1440" height="560" fill="url(#gSky)"/>
+        <circle cx="1136" cy="120" r="74" fill="#b8443a" opacity=".06"/>
+        <circle cx="1136" cy="120" r="47" fill="#b8443a" opacity=".08"/>
+        <path d="M0 372 110 300 196 344 300 258 392 330 470 292 560 352 660 278 760 348 860 296 960 358 1060 300 1160 356 1260 306 1360 360 1440 320V560H0Z" fill="url(#gFar)" filter="url(#soft6)"/>
+        <ellipse cx="700" cy="400" rx="640" ry="62" fill="#fefcf6" opacity=".62" filter="url(#soft16)"/>
+        <path d="M0 430 96 378 188 424 268 362 352 430 448 392 540 452 640 386 736 448 836 400 930 462 1030 404 1130 466 1230 418 1330 470 1440 428V560H0Z" fill="url(#gMid)"/>
+        <ellipse cx="980" cy="486" rx="520" ry="48" fill="#fdfaf3" opacity=".5" filter="url(#soft16)"/>
+        <path d="M0 500 120 462 230 500 330 452 440 508 560 470 700 512 820 468 940 514 1060 474 1180 518 1310 480 1440 512V560H0Z" fill="url(#gNear)"/>
+        <g fill="none" stroke="#767f6e" stroke-width="1.7" stroke-linecap="round" opacity=".5">
+          <path d="M300 148q13-9 26 1M318 132q12-8 24 1M344 156q11-7 22 1M382 128q13-9 26 1M400 146q11-7 22 1"/>
+          <path d="M1180 214q11-7 22 1M1200 200q10-6 20 1"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="hero-kicker" data-i18n="home.kicker">Eastern Classics · A Living Cultural Heritage</p>
+      <h1 class="hero-title"><span data-i18n="home.title">Confucius' Realm, Wisdom from The Analects</span><small data-i18n="home.subline">Sit with the sages · Pursue self-cultivation through the classics</small></h1>
+      <p class="hero-sub" data-i18n-html="home.lead">Begin with The Analects: progress from close textual reading and AI-guided inquiry to discussions among Confucius’s disciples and your own original creative work. Read, inquire, converse, create<br>— a four-step journey into classical Chinese scholarship.</p>
+      <div class="hero-cta">
+        <a class="btn btn-jade" href="/library"><span data-i18n="home.ctaLibrary">Explore the Classics</span><svg class="i"><use href="#ic-next"/></svg></a>
+        <a class="btn btn-ghost" href="/ask"><span data-i18n="home.ctaAsk">Seek Guidance</span><svg class="i"><use href="#ic-ask"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-rail" aria-hidden="true"><span data-i18n="home.rail">The Analects in Twenty Books · Opening with “Xue Er”</span></div>
+    <div class="seal-mark hero-seal" aria-hidden="true">論語</div>
+  </div>
+
+  <div class="wrap">
+    <nav class="gate-bar" data-i18n-aria="home.gates">
+      <a class="gate" href="/library">
+        <span class="gn" data-i18n="home.n1">01</span>
+        <span class="gi"><svg class="i"><use href="#ic-shelf"/></svg></span>
+        <span><b data-i18n="home.gate1">Classics Library</b><span data-i18n="home.gate1d">Classics, histories &amp; commentaries · Immersive scroll-style reading</span></span>
+      </a>
+      <a class="gate" href="/ask">
+        <span class="gn" data-i18n="home.n2">02</span>
+        <span class="gi"><svg class="i"><use href="#ic-chat"/></svg></span>
+        <span><b data-i18n="home.gate2">AI Q&amp;A</b><span data-i18n="home.gate2d">Textual Study · Inner Reflection · Self-Cultivation</span></span>
+      </a>
+      <a class="gate" href="/sages">
+        <span class="gn" data-i18n="home.n3">03</span>
+        <span class="gi"><svg class="i"><use href="#ic-people"/></svg></span>
+        <span><b data-i18n="home.gate3">Sages &amp; Disciples</b><span data-i18n="home.gate3d">Join the Confucian Circle · Message the Master</span></span>
+      </a>
+      <a class="gate" href="/presence">
+        <span class="gn" data-i18n="home.n4">04</span>
+        <span class="gi"><svg class="i"><use href="#ic-brush"/></svg></span>
+        <span><b data-i18n="home.gate4">Creative Studio</b><span data-i18n="home.gate4d">Classical-style persona · Recitation video</span></span>
+      </a>
+    </nav>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="home.today">Today’s Analects</h2>
+        <p data-i18n="home.todayDesc">A daily passage, illuminating the present through the past</p>
+        <div class="right"><button class="btn btn-ghost btn-sm" id="quoteRefresh" data-i18n="home.another">Another Passage</button></div>
+      </div>
+      <article class="today card rv">
+        <aside class="today-rail">
+          <span class="rt">日課</span>
+          <span class="ry" id="todayGanzhi">丙午年</span>
+          <span class="rt">論語</span>
+        </aside>
+        <div class="today-main">
+          <div class="today-label" id="todayDate">TODAY</div>
+          <blockquote class="today-quote" id="todayQuote"></blockquote>
+          <div class="today-src" id="todaySrc"></div>
+          <div class="today-plain" id="todayPlain"></div>
+          <div class="today-actions">
+            <button class="btn btn-jade btn-sm" onclick="go('ask')" data-i18n="home.askThis">Ask About This</button>
+            <button class="btn btn-ghost btn-sm" id="quoteCopy" data-i18n="home.copy">Copy Passage</button>
+            <button class="btn btn-ghost btn-sm" onclick="go('sages','kongzi')" data-i18n="home.hearMaster">Hear the Master</button>
+          </div>
+          <div class="seal-mark today-stamp" aria-hidden="true">論語</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="home.picks">Selected Classics</h2>
+        <div class="right"><a class="btn btn-ghost btn-sm" href="/library" data-i18n="home.viewAll">View All Classics</a></div>
+      </div>
+      <div class="pick-grid" id="pickGrid"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ==================== 典籍书库 ==================== -->
+<section class="view" id="v-library">
+  <div class="wrap page-head">
+    <h1 data-i18n="lib.title">Classics Library</h1>
+    <p data-i18n="lib.desc">Explore the Analects and its major commentaries, together with the Book of Rites, the Hereditary House of Confucius from the Records of the Grand Historian, and the Family Sayings of Confucius.</p>
+  </div>
+  <div class="wrap">
+    <div class="lib-bar">
+      <label class="search">
+        <span class="si"><svg class="i"><use href="#ic-search"/></svg></span>
+        <input id="libSearch" type="search" data-i18n-placeholder="lib.searchPh" data-i18n-aria="lib.searchAria" placeholder="Search by title, commentator, or keyword—e.g. ren, Zhu Xi, or Zilu" aria-label="Search the classics" />
+        <button class="btn btn-jade" id="libSearchBtn" data-i18n="lib.searchBtn">Search</button>
+      </label>
+    </div>
+    <div class="tag-row" id="libTags"></div>
+  </div>
+  <div class="wrap" id="shelfRoot"></div>
+</section>
+
+<!-- ==================== 卷轴阅读 ==================== -->
+<section class="view" id="v-read">
+  <div class="wrap reader">
+    <div class="reader-top">
+      <div class="crumb">
+        <a href="/" data-i18n="read.home">Home</a><span class="sep">·</span>
+        <a href="/library" data-i18n="read.library">Classics Library</a><span class="sep">·</span>
+        <span id="readCrumb">论语</span>
+      </div>
+      <div class="right">
+        <button class="btn btn-ghost btn-sm" onclick="go('library')" data-i18n="read.back">Back to Library</button>
+        <button class="btn btn-jade btn-sm" onclick="askFromReading()" data-i18n="read.ask">Ask AI About This Section</button>
+      </div>
+    </div>
+    <div class="scroll">
+      <div class="roller" aria-hidden="true"></div>
+      <div class="scroll-paper" id="readPaper">
+        <div class="scroll-cols" id="readCols"></div>
+      </div>
+      <div class="roller" aria-hidden="true"></div>
+    </div>
+    <div class="read-tools">
+      <button class="tool" data-i18n-title="read.tipHome" data-tip="Back to Home" onclick="go('home')"><svg class="i"><use href="#ic-home"/></svg></button>
+      <button class="tool" data-i18n-title="read.tipPrev" data-tip="Previous Section" id="readPrev"><svg class="i"><use href="#ic-prev"/></svg></button>
+      <button class="page-chip" id="readPage">01 / 01</button>
+      <button class="tool" data-i18n-title="read.tipNext" data-tip="Next Section" id="readNext"><svg class="i"><use href="#ic-next"/></svg></button>
+      <button class="tool" data-i18n-title="read.tipUp" data-tip="Up One Level" onclick="go('library')"><svg class="i"><use href="#ic-up"/></svg></button>
+      <button class="tool" data-i18n-title="read.tipFav" data-tip="Save This Section" id="readFav"><svg class="i"><use href="#ic-star"/></svg></button>
+      <button class="tool" data-i18n-title="read.tipAsk" data-tip="Ask the AI" onclick="askFromReading()"><svg class="i"><use href="#ic-ask"/></svg></button>
+    </div>
+    <p class="read-hint" data-i18n="read.hint">Use ← → to turn sections. Vertical text reads right to left, like unrolling a scroll.</p>
+  </div>
+</section>
+<!-- ==================== 智能问答 ==================== -->
+<section class="view" id="v-ask">
+  <div class="wrap page-head">
+    <h1 data-i18n="ask.title">AI Q&amp;A</h1>
+    <p data-i18n="ask.desc">An AI assistant grounded in The Analects and related classics. Choose Textual Study, Inner Growth, or Practical Guidance for insights on research, reflection and everyday conduct.</p>
+  </div>
+  <div class="wrap">
+    <div class="panel">
+      <div class="ws">
+        <aside class="ws-side">
+          <div class="ws-side-head">
+            <span class="dot">問</span>
+            <div><b data-i18n="ask.modes">Q&amp;A Modes</b><em data-i18n="ask.modesSub">Study · Growth · Guidance</em></div>
+          </div>
+          <div class="mode-switch" id="modeSwitch">
+            <button data-mode="study" class="on"><b>学</b><em data-i18n="ask.modeStudy">Textual Study</em></button>
+            <button data-mode="heart"><b>心</b><em data-i18n="ask.modeHeart">Inner Growth</em></button>
+            <button data-mode="body"><b>行</b><em data-i18n="ask.modeBody">Practical Guidance</em></button>
+          </div>
+          <button class="new-conv" id="newConv" data-i18n="ask.new">+ New Chat</button>
+          <div class="conv-list" id="convList"></div>
+          <div class="ws-foot" id="wsFoot">Current mode · Study &amp; Interpretation</div>
+        </aside>
+        <section class="ws-main">
+          <header class="chat-head">
+            <span class="dot" style="width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--jade);color:#f6f1e4;font-family:var(--kai)">語</span>
+            <div><div class="who" id="askWho">Analects AI</div><div class="desc" id="askDesc">Answers grounded in the classics · Sources cited</div></div>
+            <span class="sp">
+              <button class="icon-btn" data-i18n-title="ask.newTitle" title="New Chat" id="newConv2"><svg class="i"><use href="#ic-plus"/></svg></button>
+              <button class="icon-btn" data-i18n-title="ask.clear" title="Clear Current Chat" id="clearChat"><svg class="i"><use href="#ic-scroll"/></svg></button>
+            </span>
+          </header>
+          <div class="chat-body" id="askBody"></div>
+          <div class="composer">
+            <div class="prompt-chips" id="askChips"></div>
+            <div class="composer-box">
+              <textarea id="askInput" data-i18n-placeholder="ask.inputPh" placeholder="Ask a question… (Enter to send; Shift+Enter for a new line)"></textarea>
+              <button class="send" id="askSend" data-i18n-aria="ask.send"><svg class="i"><use href="#ic-send"/></svg></button>
+            </div>
+            <div class="composer-hint" data-i18n="ask.composerHint">Answers are based on the Analects and historical commentaries. Interpretations added by later scholars or the AI are labeled separately.</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 先贤对话 ==================== -->
+<section class="view" id="v-sages">
+  <div class="wrap page-head">
+    <h1 data-i18n="sages.title">Conversations with the Sages</h1>
+    <p data-i18n="sages.desc">Chat privately with a disciple or join the Confucian Circle for group discussion. Select an avatar to view their discipline, biography and the Master’s observations.</p>
+  </div>
+  <div class="wrap">
+    <div class="panel">
+      <div class="im">
+        <aside class="im-side">
+          <label class="im-search"><svg class="i" style="color:var(--faint)"><use href="#ic-search"/></svg><input id="imSearch" data-i18n-placeholder="sages.searchPh" placeholder="Search disciples" /></label>
+          <div class="contacts" id="contacts"></div>
+        </aside>
+        <section class="im-main">
+          <header class="im-head">
+            <div><div class="title" id="imTitle">The Confucian Circle</div><div class="sub" id="imSub">17 members · Group chat</div></div>
+            <div class="scenarios" id="scenarios"></div>
+          </header>
+          <div class="im-body" id="imBody"></div>
+          <div class="im-foot">
+            <div class="im-join" id="imJoin"></div>
+            <div class="im-tools">
+              <span class="im-tip" data-i18n="sages.tip">Enter to send · Shift+Enter for a new line</span>
+              <span class="im-count" id="imCount">0 / 300</span>
+            </div>
+            <div class="composer-box">
+              <span class="im-me" aria-hidden="true" data-i18n="sages.me">Me</span>
+              <textarea id="imInput" rows="1" maxlength="300" data-i18n-placeholder="sages.inputPh" placeholder="Share your situation or discuss the classics with the disciples…"></textarea>
+              <button class="send" id="imSend" data-i18n-aria="ask.send"><svg class="i"><use href="#ic-send"/></svg></button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 风骨创作 ==================== -->
+<section class="view" id="v-create">
+  <div class="create-hero">
+    <div class="wrap create-hero-inner">
+      <h1 data-i18n="create.title">Moral Fibre &amp; Aesthetic-Bearing Studio</h1>
+      <p data-i18n="create.desc">Shape a Five-Virtue persona, craft a classical portrait, choose a voice, and turn your reflection into a recitation video.</p>
+    </div>
+  </div>
+  <div class="wrap create-studio">
+    <div class="steps" id="steps">
+      <div class="step on" data-step="1"><span class="dot" data-i18n="create.n1">01</span><b data-i18n="create.step1">Personality Quiz</b></div>
+      <div class="step" data-step="2"><span class="dot" data-i18n="create.n2">02</span><b data-i18n="create.step2">Persona Card</b></div>
+      <div class="step" data-step="3"><span class="dot" data-i18n="create.n3">03</span><b data-i18n="create.step3">Portrait</b></div>
+      <div class="step" data-step="4"><span class="dot" data-i18n="create.n4">04</span><b data-i18n="create.step4">Voice</b></div>
+      <div class="step" data-step="5"><span class="dot" data-i18n="create.n5">05</span><b data-i18n="create.step5">Recitation Video</b></div>
+    </div>
+
+    <section class="create-panel create-sheet" id="cp1">
+      <div class="sec-head sec-head-create">
+        <h2><span class="en" data-i18n="create.quizTitleEn">Quiz</span><span data-i18n="create.quizTitle">Personality Quiz</span></h2>
+        <p data-i18n="create.quizDesc">When you finish, AI builds your persona from the Five Virtues: warmth, goodness, reverence, frugality and deference.</p>
+        <div class="right"><span class="note" id="quizProgress">Answered 0 / 8</span></div>
+      </div>
+      <div class="quiz" id="quiz"></div>
+      <div class="form-actions">
+        <button class="btn btn-jade" id="quizSubmit" data-i18n="create.quizSubmit">Create My Persona Card</button>
+        <button class="btn btn-ghost" id="quizReset" data-i18n="create.quizReset">Start Over</button>
+      </div>
+    </section>
+
+    <section class="create-panel create-sheet hide" id="cp2">
+      <div class="sec-head sec-head-create">
+        <h2><span class="en" data-i18n="create.personaTitleEn">Persona</span><span data-i18n="create.personaTitle">Your Persona Card</span></h2>
+        <p data-i18n="create.personaDesc">Created from your quiz responses and Five-Virtue profile</p>
+        <div class="right"><button class="btn btn-ghost btn-sm" id="retakeQuiz" data-i18n="create.retake">Retake Quiz</button></div>
+      </div>
+      <div class="persona" id="personaCard"></div>
+      <div class="form-actions">
+        <button class="btn btn-jade" data-goto="3" data-i18n="create.nextFigure">Next · Customize Portrait</button>
+      </div>
+    </section>
+
+    <section class="create-panel create-sheet hide" id="cp3">
+      <div class="sec-head sec-head-create">
+        <h2><span class="en" data-i18n="create.figureTitleEn">Portrait</span><span data-i18n="create.figureTitle">Customize Your Portrait</span></h2>
+      </div>
+      <div class="create-split figure-split">
+        <div class="create-col">
+          <input type="file" id="photoFile" accept="image/jpeg,image/png,image/webp" hidden />
+          <div class="upload" id="photoUpload" role="button" tabindex="0">
+            <div class="ui"><svg class="i"><use href="#ic-camera"/></svg></div>
+            <b data-i18n="create.uploadPhoto">Upload Your Photo</b>
+            <span data-i18n="create.uploadPhotoHint">JPG or PNG. Use a front-facing half-body photo with even lighting.</span>
+          </div>
+          <div class="stage-line"><span class="note" id="photoName" data-i18n="create.noPhoto">No photo selected</span></div>
+          <div class="gender-pick" id="genderPick">
+            <span class="note" data-i18n="create.gender">Portrait Gender</span>
+            <button type="button" class="opt" data-gender="male" data-i18n="create.male">Male</button>
+            <button type="button" class="opt" data-gender="female" data-i18n="create.female">Female</button>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-jade" id="genFigure" data-i18n="create.genFigure">Create Classical Portrait</button>
+          </div>
+          <div class="progress"><i id="figProgress"></i></div>
+          <div class="stage-line"><span class="note" id="figStage" data-i18n="create.figWait">Waiting for a photo</span></div>
+        </div>
+        <aside class="preview-frame">
+          <div class="preview" id="figPreview">
+            <img id="figImage" data-i18n-attr="alt" data-i18n="create.figPreview" alt="Portrait Preview" hidden />
+            <div class="ph" id="figPlaceholder">
+              <div><svg class="i"><use href="#ic-user"/></svg><b data-i18n="create.figPreview">Portrait Preview</b></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="create-panel create-sheet hide" id="cp4">
+      <div class="sec-head sec-head-create">
+        <h2><span class="en" data-i18n="create.voiceTitleEn">Voice</span><span data-i18n="create.voiceTitle">Voice &amp; Narration</span></h2>
+        <p data-i18n="create.voiceDesc">Choose a preset male or female narrator, or upload 10–20 seconds of clear speech to clone your own voice.</p>
+      </div>
+      <div id="voiceGrid"></div>
+      <div class="create-split voice-row">
+        <input type="file" id="audioFile" accept="audio/mpeg,audio/wav,audio/mp4,audio/x-m4a,.mp3,.wav,.m4a" hidden />
+        <div class="upload" id="audioUpload" role="button" tabindex="0">
+          <div class="ui"><svg class="i"><use href="#ic-mic"/></svg></div>
+          <b data-i18n="create.uploadAudio">Upload Audio to Clone My Voice</b>
+          <span data-i18n="create.uploadAudioHint">Read a short passage from the Analects.</span>
+        </div>
+        <div class="voice-preview">
+          <p><span data-i18n="create.currentVoice">Current voice</span> · <span id="voiceName">Ancient Resonance</span></p>
+          <div class="wave play" id="voiceWave"></div>
+          <audio id="voiceAudio" controls></audio>
+          <div class="stage-line"><span class="note" id="audioName" data-i18n="create.noClone">No cloned voice yet</span></div>
+          <div class="form-actions">
+            <button class="btn btn-ghost btn-sm hide" id="voicePlay"><svg class="i"><use href="#ic-play"/></svg> <span data-i18n="create.preview">Generate Preview</span></button>
+            <button class="btn btn-jade btn-sm" data-goto="5" data-i18n="create.useVoice">Use This Voice · Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="create-panel create-sheet hide" id="cp5">
+      <div class="sec-head sec-head-create">
+        <h2><span class="en" data-i18n="create.scriptTitleEn">Script &amp; Video</span><span data-i18n="create.scriptTitle">Create Recitation Video</span></h2>
+        <p data-i18n="create.scriptDesc">Write what The Analects prompted you to think about, or reflect on self-cultivation, relationships, learning and life.</p>
+      </div>
+      <div class="create-split video-split">
+        <div class="create-col">
+          <div class="field">
+            <label data-i18n="create.scriptLabel">Recitation Script</label>
+            <textarea id="scriptText" rows="9" data-i18n-placeholder="create.scriptPh" placeholder="Begin with a passage from the Analects, then connect it to what you are facing now…"></textarea>
+          </div>
+          <div class="stage-line">
+            <span class="note" id="scriptCount">0 characters</span>
+            <button class="btn btn-ghost btn-sm" id="scriptDemo" data-i18n="create.demo">Use Sample Text</button>
+            <button class="btn btn-ghost btn-sm" id="scriptAi" data-i18n="create.genScript">Create Script from Persona</button>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-seal" id="genVideo"><svg class="i"><use href="#ic-spark"/></svg> <span data-i18n="create.genVideo">Create Recitation Video</span></button>
+            <button class="btn btn-ghost" id="downloadBtn" disabled><svg class="i"><use href="#ic-download"/></svg> <span data-i18n="create.download">Download Video</span></button>
+          </div>
+          <div class="progress"><i id="videoProgress"></i></div>
+          <div class="stage-line"><span class="note" id="videoStage" data-i18n="create.videoWait">Waiting to generate · Your portrait, script, and voice will be combined</span></div>
+        </div>
+        <aside class="video-frame">
+          <div class="video-mock" id="videoMock">
+            <video id="videoPlayer" controls playsinline></video>
+            <div class="vm" id="videoPlaceholder">
+              <div class="play-btn"><svg class="i"><use href="#ic-play"/></svg></div>
+              <b id="videoTitle" data-i18n="create.videoTitle">Recitation Video Preview</b>
+              <span id="videoSub" data-i18n="create.videoSub">Your video will appear here.</span>
+            </div>
+          </div>
+          <div class="stage-line video-meta">
+            <button class="btn btn-ghost btn-sm" data-goto="1" data-i18n="create.redo">Start a New Version</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <div class="create-dock">
+    <div class="wrap create-dock-inner">
+      <button class="btn btn-ghost" id="stepBack" data-i18n="create.back">Back</button>
+      <span class="note" id="stepHint">Step 1 of 5</span>
+      <button class="btn btn-jade" id="stepNext" data-i18n="create.next">Next</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 个人中心 ==================== -->
+<section class="view" id="v-me">
+  <div class="wrap page-head">
+    <h1 data-i18n="me.title">My Account</h1>
+  </div>
+  <div class="wrap" id="meRoot"></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <span class="brand-text"><b>智启论语</b><span data-i18n="foot.tagline">Realm of Confucius · Immersive Classics Studio</span></span>
+    </div>
+    <p class="foot-line" id="footNote" data-i18n="foot.line">Read · Inquire · Converse · Create</p>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<div id="toastRoot" class="toast-root" aria-live="polite"></div>
+
+
+<script type="module" src="/static/app.js?v=41"></script>
+</body>
+</html>
